@@ -6,9 +6,11 @@
 }
 
 body {
+	width: 70%;
+	margin: auto;
 	display: grid;
 	grid-template-columns: 20% 50% 30%;
-	grid-template-rows: 5% 70% 25%;
+	grid-template-rows: 50px 70% 20%;
 }
 
 ul {
@@ -20,82 +22,128 @@ a {
 }
 
 main {
-	grid-area: 2 / 2 / 3 / 3;
+	grid-area: 2 / 2 / 3 / 4;
 	display: grid;
+	grid-template-columns: 3fr 2fr;
+	grid-template-rows: repeat(7, 1fr);
 }
-footer{
+
+footer {
 	grid-area: 3 / 2 / 4 / 4;
+	color: white;
 }
+
+header {
+	grid-area: 1 / 1 / 2 / 4;
+}
+
 .top-nav-container {
 	background: black;
 	width: 100%;
-	height: 20px;
+	height: 50px;
 }
 
-ul.top-nav > li {
-	display: inline-block;
+.top-nav {
+	list-style-type: none;
+	display: flex;
+	align-items: center;
 }
 
 .top-nav-link {
+	display: inline-block;
 	color: #ffffff;
+	padding: 1em;
 }
+
 .side-nav-container {
-	grid-area: 2/1/5/2;
+	grid-area: 2/1/4/2;
 	background-color: lightgray;
 
 }
 
-
-.numbers {
+.article-1 {
+	grid-area: 1 / 1 / 3 / 2;
 }
 
-h2{
+.article-2 {
+	grid-area: 3 / 1 / 5 / 2;
+}
+
+.article-3 {
+	grid-area: 5 / 1 / 7 / 2;
+}
+
+.pages-container {
+	grid-area: 7 / 1 / 8 / 3;
+}
+
+.pages {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pages-link {
+	display: inline-block;
+	padding: .5em;
+}
+
+h2 {
 	color: darkturquoise;
 }
-aside{
-	grid-row:3/2;
 
-}
 /*for the AD boxes*/
-.box{
+.box {
 	text-align: center;
+	border: 1px solid grey;
 }
 
-#box1{
-	border: 1px solid black;
+.box1 {
 	margin: .7em;
 	padding: 1em;
+	grid-area: 1 / 2 / 2 / 3;
+}
 
-}
-#box2{
-	border: 1px solid black;
+.box2 {
 	margin: .5em;
 	padding: 1.5em;
+	grid-area: 2 / 2 / 3 / 3;
 }
-#box3{
-	border: 1px solid black;
-	margin: .7em;
-	padding: 1em;
-}
-#box4{
-	 border: 1px solid black;
-	margin: .5em;
-	padding: 1.5em;
- }
-#box5{
-	  border: 1px solid black;
-	margin: .7em;
-	padding: 1em;
 
-  }
-#box6{
-	border: 1px solid black;
+.box3 {
+	margin: .7em;
+	padding: 1em;
+	grid-area: 3 / 2 / 4 / 3;
+}
+
+.box4 {
 	margin: .5em;
 	padding: 1.5em;
+	grid-area: 4 / 2 / 5 / 3;
 }
+
+.box5 {
+	margin: .7em;
+	padding: 1em;
+	grid-area: 5 / 2 / 6 / 3;
+}
+
+.box6 {
+	margin: .5em;
+	padding: 1.5em;
+	grid-area: 6 / 2 / 7 / 3;
+}
+
 /*AD boxes end*/
-.footer{
+.footer {
 	background-color: darkgray;
-	grid-row: 2/4;
-	grid-column: 3/5;
+	padding: 2em .5em;
+	height: 70%;
+}
+
+.bottom-footer {
+	background: #333333;
+	padding: .5em;
+	height: 30%;
 }
